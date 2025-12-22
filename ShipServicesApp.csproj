@@ -8,24 +8,22 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="10.1.0" />
-    <!-- Vulnerable version for demo -->
-    <PackageReference Include="Newtonsoft.Json" Version="9.0.1" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.0" />
+    <!-- Vulnerable version for demo - has CVE-2024-21907 -->
+    <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.0" />
     <PackageReference Include="Humanizer" Version="2.2.0" />
     <!-- Vulnerable version for demo -->
     <PackageReference Include="MimeKit" Version="2.10.1" />
     <!-- Vulnerable version for demo -->
     <PackageReference Include="Npgsql" Version="4.1.2" />
-    <!-- Vulnerable version for demo -->
-    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.0" />
-    <PackageReference Include="NLog" Version="4.4.13" />
+    <PackageReference Include="NLog" Version="5.0.0" />
     <PackageReference Include="Grpc.Core" Version="2.28.0" />
     <!-- Vulnerable version for demo -->
     <PackageReference Include="SharpZipLib" Version="1.2.0" />
-    <PackageReference Include="Serilog" Version="2.7.1" />
+    <PackageReference Include="Serilog" Version="2.10.0" />
     <!-- Additional vulnerable packages for demo -->
     <PackageReference Include="System.Data.SqlClient" Version="4.8.6" />
-    <PackageReference Include="BouncyCastle" Version="1.8.5" />
+    <PackageReference Include="BouncyCastle" Version="1.8.9" />
   </ItemGroup>
 
 </Project>
