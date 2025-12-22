@@ -1,0 +1,38 @@
+@model IEnumerable<ShipServicesApp.Models.SupplyRequest>
+
+<div class="row mb-4">
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 bg-success text-white mb-3">
+            <div class="card-body">
+                <h6>Fresh Water</h6>
+                <div style="font-size:1.8rem">@Model.Count(x => x.SupplyType=="Fresh Water")</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 bg-info text-white mb-3">
+            <div class="card-body">
+                <h6>Bunkers</h6>
+                <div style="font-size:1.8rem">@Model.Count(x => x.SupplyType=="Bunkers")</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 bg-warning text-dark mb-3">
+            <div class="card-body">
+                <h6>Lubes</h6>
+                <div style="font-size:1.8rem">@Model.Count(x => x.SupplyType=="Lubes")</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card shadow-sm border-0 bg-danger text-white mb-3">
+            <div class="card-body">
+                <h6>Chemicals</h6>
+                <div style="font-size:1.8rem">@Model.Count(x => x.SupplyType=="Chemicals")</div>
+            </div>
+        </div>
+    </div>
+</div>
+<h2 class="mb-4">Supply Services</h2>
+<!-- Table below -->

@@ -1,0 +1,30 @@
+@model IEnumerable<ShipServicesApp.Models.ShipRepair>
+
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0 bg-primary text-white mb-3">
+            <div class="card-body">
+                <h5>Total Repairs</h5>
+                <div style="font-size:2rem;">@Model.Count()</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0 bg-success text-white mb-3">
+            <div class="card-body">
+                <h5>Completed</h5>
+                <div style="font-size:2rem;">@Model.Count(x => x.Status=="Completed")</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0 bg-warning text-dark mb-3">
+            <div class="card-body">
+                <h5>Scheduled</h5>
+                <div style="font-size:2rem;">@Model.Count(x => x.Status=="Scheduled")</div>
+            </div>
+        </div>
+    </div>
+</div>
+<h2 class="mb-4">Ship Repairs</h2>
+<!-- Table below -->

@@ -1,0 +1,44 @@
+@model IEnumerable<ShipServicesApp.Models.TankCleaningRequest>
+
+<!-- Mini-dashboard as before, optional -->
+<div class="row mb-4">
+    <div class="col-md-6">
+        <div class="card shadow-sm border-0 bg-success text-white mb-3">
+            <div class="card-body">
+                <h5>Completed</h5>
+                <div style="font-size:2rem;">@Model.Count(x => x.Status=="Completed")</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div class="card shadow-sm border-0 bg-info text-white mb-3">
+            <div class="card-body">
+                <h5>Scheduled</h5>
+                <div style="font-size:2rem;">@Model.Count(x => x.Status=="Scheduled")</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 class="mb-4">Tank Cleaning</h2>
+<table class="table table-hover mt-2">
+    <thead>
+        <tr>
+            <th>Ship Name</th>
+            <th>Chemical Used</th>
+            <th>Cleaning Date</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ShipName</td>
+                <td>@item.ChemicalUsed</td>
+                <td>@item.CleaningDate.ToShortDateString()</td>
+                <td>@item.Status</td>
+            </tr>
+        }
+    </tbody>
+</table>

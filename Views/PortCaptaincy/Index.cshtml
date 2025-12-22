@@ -1,0 +1,24 @@
+@model IEnumerable<ShipServicesApp.Models.PortCaptain>
+
+<!-- Mini-dashboard -->
+<div class="row mb-4">
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0 bg-gradient-primary text-white mb-3">
+            <div class="card-body">
+                <h5>Total Port Captains</h5>
+                <div style="font-size:2.5rem;">@Model.Count()</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card shadow-sm border-0 bg-gradient-info text-white mb-3">
+            <div class="card-body">
+                <h5>Ports Covered</h5>
+                <div style="font-size:2.5rem;">@Model.Select(c=>c.AssignedPort).Distinct().Count()</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h2 class="mb-4">Port Captaincy</h2>
+<!-- Place your regular data table below -->

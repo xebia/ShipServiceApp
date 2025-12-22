@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ShipServicesApp</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <style>
+        body { background-color: #f8fafc; }
+        .sidebar { min-height: 100vh; background: #22223b; }
+        .sidebar a { color: #fff; text-decoration: none; }
+        .sidebar .nav-link.active, .sidebar .nav-link:hover { background: #4a4e69; color: #fff; }
+        .app-header { background: #4a4e69; color: #fff; padding: 1rem 2rem; font-size: 2rem; letter-spacing: 2px; }
+        .main-content { padding: 2rem; }
+    </style>
+</head>
+<body>
+    <div class="app-header">Ship Services Management</div>
+    <div class="container-fluid">
+        <div class="row">
+            <nav class="col-md-2 d-none d-md-block sidebar py-3">
+                <div class="nav flex-column">
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Home" ? "active" : "")" asp-controller="Home" asp-action="Index">Home</a>
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "ShipAgency" ? "active" : "")" asp-controller="ShipAgency" asp-action="Index">Ship Agencies</a>
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "PortCaptaincy" ? "active" : "")" asp-controller="PortCaptaincy" asp-action="Index">Port Captaincy</a>
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "CrewSupply" ? "active" : "")" asp-controller="CrewSupply" asp-action="Index">Emergency Crew / Repairs</a>
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "SupplyServices" ? "active" : "")" asp-controller="SupplyServices" asp-action="Index">Supply Services</a>
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "ShipRepairs" ? "active" : "")" asp-controller="ShipRepairs" asp-action="Index">Ship Repairs</a>
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Customs" ? "active" : "")" asp-controller="Customs" asp-action="Index">Customs Clearance</a>
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "UnderwaterServices" ? "active" : "")" asp-controller="UnderwaterServices" asp-action="Index">Underwater/Diving</a>
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Husbanding" ? "active" : "")" asp-controller="Husbanding" asp-action="Index">Husbanding</a>
+                    <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "TankCleaning" ? "active" : "")" asp-controller="TankCleaning" asp-action="Index">Tank Cleaning</a>
+                </div>
+            </nav>
+            <main class="col-md-10 ms-sm-auto main-content">
+                @RenderBody()
+            </main>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

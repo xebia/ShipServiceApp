@@ -1,0 +1,71 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<!-- Hero Section with Ship Banner -->
+<div class="container mb-5">
+    <div class="row align-items-center">
+        <div class="col-md-7">
+            <h1 class="display-3 fw-bold text-primary">Ship Services Management System</h1>
+            <p class="lead mt-3 mb-4">
+                All-in-one platform for Ship Agency, Crew supply, Repairs, Logistics, and Marine services. <br>
+                Effortlessly manage port operations, requests, clearance, and more!
+            </p>
+            <a href="/ShipAgency" class="btn btn-lg btn-gradient-primary me-2 shadow">Get Started</a>
+            <a href="/swagger" class="btn btn-outline-secondary btn-lg me-2">Try API</a>
+        </div>
+        <div class="col-md-5 text-center">
+            <!-- Big Ship! Use your own or a royalty-free ship photo if deployed! -->
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=700&q=80"
+                 alt="Ship" class="img-fluid rounded shadow-lg" style="max-height: 320px;">
+        </div>
+    </div>
+</div>
+
+<!-- Quick Modules Overview / Cards -->
+<div class="container mt-4">
+    <div class="row g-4">
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card text-center h-100 shadow-sm border-0 animate__animated animate__fadeInUp">
+                <div class="card-body">
+                    <i class="bi bi-people-fill fs-1 text-primary"></i>
+                    <h5 class="card-title mt-3">Ship Agencies</h5>
+                    <p class="card-text small">Manage agency details and contacts.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card text-center h-100 shadow-sm border-0 animate__animated animate__fadeInUp">
+                <div class="card-body">
+                    <i class="bi bi-person-badge-fill fs-1 text-success"></i>
+                    <h5 class="card-title mt-3">Port Captaincy</h5>
+                    <p class="card-text small">Assign and overview port captains.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Add more cards for all your modules in a similar way -->
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card text-center h-100 shadow-sm border-0 animate__animated animate__fadeInUp">
+                <div class="card-body">
+                    <i class="bi bi-tools fs-1 text-danger"></i>
+                    <h5 class="card-title mt-3">Ship Repairs</h5>
+                    <p class="card-text small">Track ship repairs and maintenance.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-4 col-sm-6">
+            <div class="card text-center h-100 shadow-sm border-0 animate__animated animate__fadeInUp">
+                <div class="card-body">
+                    <i class="bi bi-droplet-fill fs-1 text-info"></i>
+                    <h5 class="card-title mt-3">Supply Services</h5>
+                    <p class="card-text small">Manage water, bunkers & lubrication requests.</p>
+                </div>
+            </div>
+        </div>
+        <!-- Continue for remaining modules... -->
+    </div>
+</div>
+
+<!-- Optional: Animated CSS/JS (Bootstrap icons & Animate.css for demo effect) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
