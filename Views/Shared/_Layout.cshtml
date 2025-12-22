@@ -33,13 +33,13 @@
     </style>
 </head>
 <body>
-    <button class="sidebar-toggle" id="sidebarToggle" type="button">
+    <button class="sidebar-toggle" id="sidebarToggle" type="button" aria-label="Toggle navigation sidebar">
         <i class="bi bi-list fs-4"></i>
     </button>
     
     <div class="app-header">Ship Services Management</div>
     
-    <nav class="col-md-2 sidebar py-3" id="sidebar">
+    <nav class="col-md-2 sidebar py-3" id="sidebar" aria-label="Main navigation">
         <div class="nav flex-column">
             <!-- Home -->
             <a class="nav-link @(ViewContext.RouteData.Values["controller"].ToString() == "Home" ? "active" : "")" asp-controller="Home" asp-action="Index">
@@ -60,7 +60,7 @@
             </a>
             
             <!-- Supply & Maintenance Group -->
-            <div class="collapse-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#supplyGroup">
+            <div class="collapse-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#supplyGroup" aria-expanded="false" aria-controls="supplyGroup">
                 <i class="bi bi-chevron-right"></i>
                 <i class="bi bi-box-seam-fill"></i>Supply & Maintenance
             </div>
@@ -74,7 +74,7 @@
             </div>
             
             <!-- Operations Group -->
-            <div class="collapse-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#operationsGroup">
+            <div class="collapse-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#operationsGroup" aria-expanded="false" aria-controls="operationsGroup">
                 <i class="bi bi-chevron-right"></i>
                 <i class="bi bi-gear-fill"></i>Operations
             </div>
@@ -124,7 +124,8 @@
             if (activeLink) {
                 const collapse = activeLink.closest('.collapse');
                 if (collapse) {
-                    const bsCollapse = new bootstrap.Collapse(collapse, { toggle: true });
+                    const bsCollapse = new bootstrap.Collapse(collapse, { toggle: false });
+                    bsCollapse.show();
                     const toggle = document.querySelector('[data-bs-target="#' + collapse.id + '"]');
                     if (toggle) {
                         toggle.classList.remove('collapsed');
