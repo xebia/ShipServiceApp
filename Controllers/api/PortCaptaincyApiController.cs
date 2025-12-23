@@ -1,6 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
 using ShipServicesApp.Services;
-using ShipServicesApp.Models;
 
 namespace ShipServicesApp.Controllers.api
 {
