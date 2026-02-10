@@ -1,0 +1,335 @@
+@{
+    ViewData["Title"] = "API Endpoint Guide";
+}
+
+<div class="container">
+    <!-- Page Header -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <h1 class="display-4 text-primary mb-3">
+                <i class="bi bi-code-square"></i> API Endpoint Guide
+            </h1>
+            <p class="lead">
+                Complete reference for all Ship Services REST API endpoints. All endpoints return JSON and follow REST conventions.
+            </p>
+            <div class="alert alert-info">
+                <strong>Base URL:</strong> <code>http://localhost:5145/api</code><br>
+                <strong>Swagger UI:</strong> <a href="/swagger" target="_blank">/swagger</a> - Interactive API testing
+            </div>
+        </div>
+    </div>
+
+    <!-- Ship Agencies API -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-primary text-white">
+            <h4 class="mb-0">
+                <i class="bi bi-people-fill"></i> Ship Agencies API
+            </h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Manage ship agency information including contacts and details.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Endpoint</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge bg-success">GET</span></td>
+                        <td><code>/api/ShipAgenciesApi</code></td>
+                        <td>Get all ship agencies</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Port Captaincy API -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-success text-white">
+            <h4 class="mb-0">
+                <i class="bi bi-person-badge-fill"></i> Port Captaincy API
+            </h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Manage port captain assignments and contact information.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Endpoint</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge bg-success">GET</span></td>
+                        <td><code>/api/PortCaptainsApi</code></td>
+                        <td>Get all port captains</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Crew Supply API -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-warning text-dark">
+            <h4 class="mb-0">
+                <i class="bi bi-person-check-fill"></i> Crew Supply API
+            </h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Handle emergency crew requests and replacements.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Endpoint</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge bg-success">GET</span></td>
+                        <td><code>/api/CrewRequestsApi</code></td>
+                        <td>Get all crew requests</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Supply Services API -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-info text-white">
+            <h4 class="mb-0">
+                <i class="bi bi-droplet-fill"></i> Supply Services API
+            </h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Manage water, bunkers, and lubrication supply requests.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Endpoint</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge bg-success">GET</span></td>
+                        <td><code>/api/SupplyRequestsApi</code></td>
+                        <td>Get all supply requests</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Ship Repairs API -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-danger text-white">
+            <h4 class="mb-0">
+                <i class="bi bi-tools"></i> Ship Repairs API
+            </h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Track and manage ship repair and maintenance requests.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Endpoint</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge bg-success">GET</span></td>
+                        <td><code>/api/ShipRepairsApi</code></td>
+                        <td>Get all ship repair requests</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Customs Clearance API -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-secondary text-white">
+            <h4 class="mb-0">
+                <i class="bi bi-file-earmark-check"></i> Customs Clearance API
+            </h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Manage customs stores and clearance documentation.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Endpoint</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge bg-success">GET</span></td>
+                        <td><code>/api/CustomStoresApi</code></td>
+                        <td>Get all customs stores and clearance status</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Underwater Services API -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header bg-dark text-white">
+            <h4 class="mb-0">
+                <i class="bi bi-water"></i> Underwater Services API
+            </h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Schedule and track underwater diving and inspection services.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Endpoint</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge bg-success">GET</span></td>
+                        <td><code>/api/UnderwaterServicesApi</code></td>
+                        <td>Get all underwater service requests</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Husbanding API -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header text-white" style="background-color: #6c757d;">
+            <h4 class="mb-0">
+                <i class="bi bi-boxes"></i> Husbanding API
+            </h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Handle husbanding requests including supplies and services.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Endpoint</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge bg-success">GET</span></td>
+                        <td><code>/api/HusbandingRequestsApi</code></td>
+                        <td>Get all husbanding requests</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Tank Cleaning API -->
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header text-white" style="background-color: #0dcaf0;">
+            <h4 class="mb-0">
+                <i class="bi bi-bucket-fill"></i> Tank Cleaning API
+            </h4>
+        </div>
+        <div class="card-body">
+            <p class="card-text">Manage tank cleaning schedules and chemical usage tracking.</p>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Method</th>
+                        <th>Endpoint</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span class="badge bg-success">GET</span></td>
+                        <td><code>/api/TankCleaningRequestsApi</code></td>
+                        <td>Get all tank cleaning requests</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Response Format Section -->
+    <div class="card mb-4 shadow-sm border-primary">
+        <div class="card-header bg-light">
+            <h4 class="mb-0 text-primary">
+                <i class="bi bi-braces"></i> Response Format
+            </h4>
+        </div>
+        <div class="card-body">
+            <p>All API endpoints return data in JSON format. Example response structure:</p>
+            <pre class="bg-light p-3 rounded"><code>[
+  {
+    "id": 1,
+    "agencyName": "Blue Ocean Maritime",
+    "contactPerson": "Alice Dsouza",
+    "contactEmail": "alice@blueocean.com"
+  },
+  {
+    "id": 2,
+    "agencyName": "Global Ports",
+    "contactPerson": "John Lee",
+    "contactEmail": "john@globalports.com"
+  }
+]</code></pre>
+        </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="card mb-4 shadow-sm border-success">
+        <div class="card-header bg-light">
+            <h4 class="mb-0 text-success">
+                <i class="bi bi-link-45deg"></i> Quick Links
+            </h4>
+        </div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-unstyled">
+                        <li class="mb-2">
+                            <a href="/swagger" class="btn btn-outline-primary btn-sm">
+                                <i class="bi bi-play-circle"></i> Try APIs in Swagger UI
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="/" class="btn btn-outline-secondary btn-sm">
+                                <i class="bi bi-house"></i> Back to Home
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <div class="alert alert-light mb-0">
+                        <strong>Note:</strong> This application uses in-memory demo data. 
+                        All data is reset when the application restarts.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Include Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
