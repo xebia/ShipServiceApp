@@ -54,8 +54,18 @@ namespace ShipServicesApp.Controllers
         [HttpGet("download")]
         public IActionResult DownloadFile(string filename)
         {
-            // Vulnerable: No path validation
-            var filePath = $"/var/www/files/{filename}";
+            // Validate and normalize the requested file path to prevent path traversal
+            var baseDirectory = "/var/www/files";
+            var baseDirectoryFullPath = System.IO.Path.GetFullPath(baseDirectory);
+            var combinedPath = System.IO.Path.Combine(baseDirectoryFullPath, filename ?? string.Empty);
+            var filePath = System.IO.Path.GetFullPath(combinedPath);
+
+            // Ensure the resolved path is still within the intended base directory
+            if (!filePath.StartsWith(baseDirectoryFullPath + System.IO.Path.DirectorySeparatorChar))
+            {
+                return BadRequest("Invalid file path.");
+            }
+
             if (System.IO.File.Exists(filePath))
             {
                 var fileBytes = System.IO.File.ReadAllBytes(filePath);
