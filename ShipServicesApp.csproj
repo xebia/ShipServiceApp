@@ -15,7 +15,7 @@
     <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="8.0.0" />
     <PackageReference Include="Humanizer" Version="2.2.0" />
     <!-- Vulnerable version for demo -->
-    <PackageReference Include="MimeKit" Version="2.10.1" />
+    <PackageReference Include="MimeKit" Version="4.15.1" />
     <!-- Vulnerable version for demo -->
     <PackageReference Include="Npgsql" Version="4.1.2" />
     <PackageReference Include="NLog" Version="5.0.0" />
